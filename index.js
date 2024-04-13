@@ -18,7 +18,7 @@ app.use(helmet.contentSecurityPolicy({
         defaultSrc: ["'self'"],
         styleSrc: ["'self'", "'unsafe-inline'","https://cdnjs.cloudflare.com"], // Allowing inline styles for now
         // Add additional directives as needed
-        scriptSrc: ["'self'", "https://cdnjs.cloudflare.com"]
+        scriptSrc: ["'self'", "https://cdnjs.cloudflare.com","'unsafe-inline'"]
     }
 }));
 
