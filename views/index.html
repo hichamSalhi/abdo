@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="promotion-bar">
+        <span dir="rtl">أحدث العروض: خصم 25% على جميع كراسي الشاطئ!</span>
+    </div>
+    <div class="header">
+        <span><h1>HMIZAT متجر</h1></span>
+    </div>
+    <div class="container">
+        <div class="inside-container">
+                <div class="main-image-box">
+                    <img src="/img/photo-1.jpg" alt="" id="mainImage" class="main-image">
+                </div>
+                <div class="small-images">
+                    <div class="image-box"><img src="/img/photo-1.jpg" alt="image" class="image"></div>
+                    <div class="image-box"><img src="/img/photo-2.jpg" alt="image" class="image"></div>
+                    <div class="image-box"><img src="/img/photo-3.jpg" alt="image" class="image"></div>
+                    <div class="image-box"><img src="/img/photo-4.jpg" alt="image" class="image"></div>
+                </div>
+        </div>
+        <div class="registration-form">
+            <h1 dir="rtl">قم بالتسجيل لتنزيل طلبك</h1>
+            <p dir="rtl">كراسي الشاطئ عالية الجودة</p>
+            <div class="countdown-bar">
+                <div class="countdown-progress">
+                    <div dir="rtl" class="countdown-timer">تبقى من الوقت : <span id="countdown"></span></div>
+                </div>
+            </div>
+            <h3>499 DH</h3>
+            <h2>399 DH</h2>
+            <form id="registrationForm" action="/register" method="POST">
+                <table cellspacing="0" class="inputs">
+                    <tr>
+                        <td align="left"><input type="text" id="name" name="name" placeholder="..." required></td>
+                        <td align="right" class="label">الإسم الكامل</td>
+                    </tr>
+                    <tr>
+                        <td align="left"><input type="email" id="email" name="email" placeholder="..." required></td>
+                        <td align="right" class="label">البريد الوارد</td>
+                    </tr>
+                    <tr>
+                        <td align="left"><input type="phone" id="phone" name="phone" placeholder="..." required></td>
+                        <td align="right" class="label">رقم الهاتف</td>
+                    </tr>
+                    <tr>
+                        <td align="left"><input type="number" id="quantity" name="quantity" placeholder="..." required></td>
+                        <td align="right" class="label">عدد الكراسي</td>
+                    </tr>
+                    <tr>
+                        <td align="left"><input type="number" id="total" name="total" placeholder="..." required disabled></td>
+                        <td align="right" class="label">المجموع</td>
+                    </tr>
+                </table>
+                <h4 class="nameSpec" dir="rtl">المميزات</h4>
+                <p dir="rtl">اكتشف قمة الراحة والأناقة مع كراسي الشاطئ عالية الجودة لدينا. تم تصميمها لتوفير الاسترخاء الكامل تحت أشعة الشمس المشرقة، حيث تجمع كراسينا بين التصميم الانسيابي والمواد المتينة لخلق الإكسسوار المثالي لأيامك على الشاطئ. بفضل هيكلها الخفيف ولكنه المتين، يمكنك حملها بسهولة وتركيبها بسرعة، مما يتيح لك الاسترخاء والاستمتاع بيومك بشكل كامل. توفر النسيج المقاوم للطقس راحة دائمة، بينما يسمح لك الظهر القابل للتعديل بالعثور على الوضع المثالي للاسترخاء. سواء كنت تشمس، تقرأ كتابك المفضل، أو تتمتع بالاسترخاء على ضفاف الماء، فإن كراسي الشاطئ لدينا ترافقك بأناقة وراحة. متوفرة بمجموعة متنوعة من الألوان الزاهية لتتناسب مع أسلوبك الشخصي، فهي الإكسسوار اللازم لأي نزهة صيفية. اختر الراحة المطلقة والجودة الفائقة مع كراسي الشاطئ لدينا اليوم!</p>
+                <button type="submit">تسجيل</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 HMIZAT متجر. All rights reserved.</p>
+        <div class="contact-info">
+            <p dir="rtl">التواصل: wshop0780@gmail.com | +2126 48-718271</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="whatsapp"><i class="fab  fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        let mainImage = document.getElementById("mainImage");
+        let smallImage = document.getElementsByClassName("image");
+        smallImage[0].onclick = ()=>{
+            mainImage.src = smallImage[0].src;
+        }
+        smallImage[1].onclick = ()=>{
+            mainImage.src = smallImage[1].src;
+        }
+        smallImage[2].onclick = ()=>{
+            mainImage.src = smallImage[2].src;
+        }
+        smallImage[3].onclick = ()=>{
+            mainImage.src = smallImage[3].src;
+        }
+
+        function updateTotal() {
+            var quantity = parseInt(document.getElementById("quantity").value);
+            // Check if quantity is a valid number
+            if (!isNaN(quantity)) {
+                var total = quantity * 399;
+                document.getElementById("total").value = total;
+            } else {
+                // Handle the case when quantity is not a valid number
+                document.getElementById("total").value = ""; // Clear total field or display an error message
+            }
+        }
+
+        // Add event listener to the quantity input field
+        document.getElementById("quantity").addEventListener('input', updateTotal);
+
+
+        // Set the target date (one hour from now)
+        const targetDate = new Date();
+        targetDate.setHours(targetDate.getHours() + 1);
+
+        // Update the countdown timer every second
+        const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        // Calculate remaining time
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the remaining time
+        document.getElementById('countdown').innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+        // Calculate the remaining percentage of time
+        const totalSeconds = 60 * 60;
+        const remainingSeconds = Math.floor(distance / 1000);
+        const remainingPercentage = (remainingSeconds / totalSeconds) * 100;
+
+        // Update the width of the progress bar
+        document.querySelector('.countdown-progress').style.width = remainingPercentage + '%';
+
+        // If the countdown is over, stop the interval
+        if (distance <= 0) {
+        clearInterval(countdownInterval);
+        document.querySelector('.countdown-progress').style.width = '0%'; // Set width to 0 when time is up
+        document.getElementById('countdown').innerHTML = "Time's up!";
+        }
+        }, 1000); // Update every second
+
+
+    </script>
+</body>
+</html>
