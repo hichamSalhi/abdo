@@ -10,6 +10,9 @@
     <div class="promotion-bar">
         <span dir="rtl">أحدث العروض: خصم 25% على جميع كراسي الشاطئ!</span>
     </div>
+    <div class="promotion-bar-second">
+        <span dir="rtl">عند شراء كرسيين، سيصبح السعر 699 .</span>
+    </div>
     <div class="header">
         <span><h1>HMIZAT متجر</h1></span>
     </div>
@@ -72,7 +75,7 @@
         <div class="social-icons">
             <a href="#" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
             <a href="#" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" class="whatsapp"><i class="fab  fa-whatsapp"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=+216648718271" target="_blank" class="whatsapp"><i class="fab  fa-whatsapp"></i></a>
         </div>
     </footer>
 
@@ -96,8 +99,12 @@
             var quantity = parseInt(document.getElementById("quantity").value);
             // Check if quantity is a valid number
             if (!isNaN(quantity)) {
-                var total = quantity * 399;
-                document.getElementById("total").value = total;
+                if(quantity === 2){
+                    document.getElementById("total").value = 699;
+                }else{
+                    var total = quantity * 399;
+                    document.getElementById("total").value = total;
+                }
             } else {
                 // Handle the case when quantity is not a valid number
                 document.getElementById("total").value = ""; // Clear total field or display an error message

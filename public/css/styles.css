@@ -1,7 +1,7 @@
 
 /* header menu */
 .header{
-    margin : 40px 40px 0px 0px;
+    margin : 80px 40px 0px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,6 +171,25 @@ button:hover {
     font-weight: bold;
 }
 
+.promotion-bar-second{
+    background-color: #ff07b9;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    margin-top: 40px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other content */
+    font-size: 16px;
+}
+
+.promotion-bar-second span {
+    font-weight: bold;
+}
+
+
 /*countdown progress*/
 
 .countdown-bar {
@@ -273,10 +292,18 @@ footer p {
         text-align: left;
     }
 
+    .promotion-bar-second {
+        width: 100%;
+        text-align: center;
+    }
+
+    .promotion-bar-second span{
+        font-weight: bold;
+    }
+
     .promotion-bar span {
         font-weight: bold;
     }
-    
 
     .main-image-box {
         padding: 0;
