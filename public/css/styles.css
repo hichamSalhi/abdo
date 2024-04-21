@@ -272,6 +272,12 @@ footer p {
 
 
 @media (max-width: 768px) {
+    .alignleft{
+        align-items: end;
+        justify-content: end;
+        display: flex;
+    }
+    
     .container {
         flex-direction: column;
         align-items: center;
@@ -333,5 +339,11 @@ footer p {
         overflow-x: hidden;
     }
 }
+
+.red{
+    color : red;
+    align-items: right;
+}
+
 
 
