@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    const { name, email, phone, quantity, total,address } = req.body;
+    const { name, phone, quantity, total,address } = req.body;
 
     // HTML content for the email to client
     const clientHtmlContent = `
@@ -100,11 +100,8 @@ app.post('/register', (req, res) => {
         </html>
     `;
 
-    // Send email to client with HTML content
-    sendEmail([email], 'تأكيد التسجيل', clientHtmlContent);
-
     // Send email to admin (you)
-    sendEmail('wshop0780@gmail.com', 'New Registration', `A new registration has been received. Here are the details: Name: ${name}, Email: ${email}, Phone: ${phone}, Quantity: ${quantity}, Total: ${total}, Address: ${address}`);
+    sendEmail('wshop0780@gmail.com', 'New Registration', `A new registration has been received. Here are the details: Name: ${name}, Phone: ${phone}, Quantity: ${quantity}, Total: ${total}, Address: ${address}`);
 
     res.redirect('/thank-you');
 });
